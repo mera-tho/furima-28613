@@ -1,4 +1,3 @@
 class ItemsController < ApplicationController
-  def index  # indexアクションを定義した
-  end
+  root  'rails/welcome#index'  end
 end
