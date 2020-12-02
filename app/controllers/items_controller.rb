@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  def index  # indexアクションを定義した
-    @items = Items.all
+  def index  
+    @items = Item.all
   end
 end
