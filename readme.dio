@@ -1,0 +1,64 @@
+<mxfile host="65bd71144e" modified="2020-12-09T11:50:28.611Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.51.1 Chrome/83.0.4103.122 Electron/9.3.3 Safari/537.36" version="13.10.0" etag="jaTs69ZymCLpX1A79TdU" type="embed">
+    <diagram id="_Q7WCkN239FhMvjNGIfI" name="ページ1">
+        <mxGraphModel dx="756" dy="797" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="88" value="users " style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="270" width="150" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="91" value="・ニックネーム&#10;・メールアドレス&#10;・パスワード&#10;・名前&#10;・ナマエ&#10;・生年月日&#10;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="88" vertex="1">
+                    <mxGeometry y="26" width="150" height="134" as="geometry"/>
+                </mxCell>
+                <mxCell id="99" value="Items" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="270" width="160" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="100" value="・名前&#10;・値段&#10;・商品の説明&#10;・ユーザー&#10;・カテゴリー&#10;・商品の状態&#10;・配送料&#10;・発送元の地域&#10;・発送日&#10;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="99" vertex="1">
+                    <mxGeometry y="26" width="160" height="134" as="geometry"/>
+                </mxCell>
+                <mxCell id="107" value="Addreses" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="550" y="60" width="160" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="108" value="・郵便番号&#10;・都道府県&#10;・市区町村&#10;・番地&#10;・建物名&#10;・電話番号&#10;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="107" vertex="1">
+                    <mxGeometry y="26" width="160" height="134" as="geometry"/>
+                </mxCell>
+                <mxCell id="117" value="Purchases " style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="300" y="60" width="150" height="66" as="geometry"/>
+                </mxCell>
+                <mxCell id="148" value="・User&lt;br&gt;・Items" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=14;" parent="117" vertex="1">
+                    <mxGeometry y="26" width="150" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="135" value="" style="fontSize=12;html=1;endArrow=ERoneToMany;strokeColor=none;" parent="1" edge="1">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="380" y="230" as="sourcePoint"/>
+                        <mxPoint x="480" y="130" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="140" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERone;endFill=0;startArrow=ERzeroToMany;" parent="1" edge="1">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="190" y="320" as="sourcePoint"/>
+                        <mxPoint x="319" y="320" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="155" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERone;endFill=0;startArrow=ERzeroToOne;startFill=1;" parent="1" source="148" target="108" edge="1">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="170" y="540" as="sourcePoint"/>
+                        <mxPoint x="280" y="540" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="169" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERone;entryX=-0.013;entryY=0.775;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=ERzeroToOne;startFill=1;endFill=0;endSize=8;startSize=5;" parent="1" target="148" edge="1">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="190" y="300" as="sourcePoint"/>
+                        <mxPoint x="290" y="200" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="172" value="" style="endArrow=ERzeroToOne;html=1;rounded=0;fontSize=14;startArrow=ERmany;startFill=0;endFill=1;sourcePerimeterSpacing=7;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="377" y="126" as="sourcePoint"/>
+                        <mxPoint x="377" y="267" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
