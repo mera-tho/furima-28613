@@ -45,6 +45,7 @@ Association
 Association
 ・belongs_to: item
 ・belongs_to: user
+・has_one: address
 
 ## addressesテーブル
 
@@ -56,7 +57,7 @@ Association
 | house_number    | string     | null: false                   |
 | building        | string     |                               |
 | telephone_number| string     | null: false                   |
-| purchase        | references | null: false  ,foreign_key:true|
+| user            | references | null: false  ,foreign_key:true|
     
 Association
 ・belongs_to: purchase
