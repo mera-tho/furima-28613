@@ -28,7 +28,7 @@ Association
 | category_id     | integer   | null: false                  |
 | condition_id    | integer   | null: false                  |
 | shipping_fee_id | integer   | null: false                  |
-| prefecture      | integer   | null: false                  |
+| prefecture_id   | integer   | null: false                  |
 | shipping_date_id| integer   | null: false                  |    
 | user            | references| null: false foreign_key: true|    
 Association
@@ -44,7 +44,8 @@ Association
 
 Association
 ・belongs_to: item
-・has_one: users
+・belongs_to: users
+・has_one: address
 ## addressesテーブル
 
 | Column          | Type       |  Options                      |
@@ -59,3 +60,4 @@ Association
     
 Association
 ・belongs_to: purchase
+
