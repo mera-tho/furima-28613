@@ -16,7 +16,7 @@
 Association
 ・has_many: items
 ・has_many: purchases
-・has_one: address
+
 
 ## itemsテーブル
 
@@ -31,6 +31,7 @@ Association
 | prefecture_id   | integer   | null: false                  |
 | shipping_date_id| integer   | null: false                  |    
 | user            | references| null: false foreign_key: true|    
+
 Association
 ・belongs_to: user
 ・has_one: purchase
@@ -57,7 +58,7 @@ Association
 | house_number    | string     | null: false                   |
 | building        | string     |                               |
 | telephone_number| string     | null: false                   |
-| user            | references | null: false  ,foreign_key:true|
+| purchase        | references | null: false  ,foreign_key:true|
     
 Association
 ・belongs_to: purchase
