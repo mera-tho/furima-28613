@@ -62,4 +62,3 @@ Association
     
 Association
 ・belongs_to: purchase
-
