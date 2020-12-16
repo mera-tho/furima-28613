@@ -79,8 +79,15 @@ RSpec.describe User, type: :model do
       @user.valid?
       expect(@user.errors.full_messages).to include "Password is invalid"
     end
+    
+    it 'passwordが英字のみでは登録できない' do
+      @user.password = "aaaa"
+      @user.valid?
+      expect(@user.errors.full_messages).to include "Password is invalid"
+    end
+    
     it "passwordが存在してもpassword_confirmationがない場合は登録できないこと" do
-      user = build(:user, password_confirmation: "")
+      user = FactoryBot.build(:user, password_confirmation: "")
       user.valid?
       expect(user.errors[:password_confirmation]).to include("doesn't match Password")
     end
