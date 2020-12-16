@@ -5,7 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
          
   
-  
   with_options presence: true do
   validates :last_name,format: {with: /\A[ぁ-んァ-ン一-龥]/ }
   validates :first_name, format: {with: /\A[ぁ-んァ-ン一-龥]/ }
@@ -13,7 +12,8 @@ class User < ApplicationRecord
   validates :first_name_kana, format: {with: /\A[ァ-ヶー－]+\z/ }
   validates :nickname, presence: true
   validates :birthday, presence: true
-  PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
-  validates_format_of :password, with: PASSWORD_REGEX, message: 'Include both letters and numbers' 
-  end
+  PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze 
+  validates_format_of :password, with: PASSWORD_REGEX
 end
+end
+
