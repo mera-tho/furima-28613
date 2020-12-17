@@ -27,6 +27,14 @@ RSpec.describe User, type: :model do
       expect(@user.errors.full_messages).to include "Email is invalid"
     end
     
+    it "重複したemailが存在する場合登録できないこと" do
+      @user.save
+      another_user = FactoryBot.build(:user)
+      another_user.email = @user.email
+      another_user.valid?
+      expect(another_user.errors.full_messages).to include("Email has already been taken")
+    end
+
     it "last_nameが空だと登録できない" do
       @user.last_name = ""
       @user.valid?
@@ -86,10 +94,10 @@ RSpec.describe User, type: :model do
       expect(@user.errors.full_messages).to include "Password is invalid"
     end
     
-    it "passwordが存在してもpassword_confirmationがない場合は登録できないこと" do
-      user = FactoryBot.build(:user, password_confirmation: "")
-      user.valid?
-      expect(user.errors[:password_confirmation]).to include("doesn't match Password")
+    it "passwordが存在してもpassword_confirmationがない場合は登録できない" do
+      @user.password_confirmation = ""
+      @user.valid?
+      expect(@user.errors[:password_confirmation]).to include("doesn't match Password")
     end
   end
 end 
