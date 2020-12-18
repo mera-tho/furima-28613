@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   #トップページ#
 root 'items#index'
+resources :items, only: [:index, :new, :create]
 
 
 end

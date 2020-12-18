@@ -21,7 +21,7 @@ Association
 ## itemsテーブル
 
 | Column          | Type      |  Options                     |
-| ----------------|-----------|------------------------------|     
+|-----------------|-----------|------------------------------|
 | name            | string    | null: false                  |
 | price           | integer   | null: false                  |
 | explanation     | text      | null: false                  |
@@ -29,8 +29,8 @@ Association
 | condition_id    | integer   | null: false                  |
 | shipping_fee_id | integer   | null: false                  |
 | prefecture_id   | integer   | null: false                  |
-| shipping_date_id| integer   | null: false                  |    
-| user            | references| null: false foreign_key: true|    
+| shipping_date_id| integer   | null: false                  |
+| user            | references| null: false,foreign_key:true |    
 
 Association
 ・belongs_to: user
