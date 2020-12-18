@@ -13,6 +13,16 @@ class Item < ApplicationRecord
     validates :prefecture_id
     validates :shipping_date_id
     validates :image
-    
+  
+  
+ extend ActiveHash::Associations::ActiveRecordExtensions  
+  belongs_to :prefecture
+  belongs_to :category
+  belongs_to :shipping_fee
+  belongs_to :condition
+  belongs_to :shipping_date
 
   end
+  
+end
+
